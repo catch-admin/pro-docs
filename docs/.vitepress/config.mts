@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: 'CatchAdmin pro 文档',
+  title: 'CatchAdmin pro 文档站',
   description: 'CatchAdmin pro 文档',
   assetsDir: 'docs/assets',
   cleanUrls: true,
