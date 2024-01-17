@@ -1,6 +1,6 @@
 # 入口
 
-前端项目放置在根目录 `web` 目录下，关于前端各个目录的作用就不做多介绍了，可以到[项目介绍](/docs/1.0/overview)中查看。`app.ts` 即项目的入口
+前端项目放置在根目录 `web` 目录下，关于前端各个目录的作用就不做多介绍了，可以到[项目介绍](/start/overview)中查看。`app.ts` 即项目的入口
 
 ```javascript title="resource/admin/app.ts"
 import '/admin/styles/index.scss'
