@@ -1,0 +1,3 @@
+yarn.lock
+/.vitepress/cache
+/node_modules
