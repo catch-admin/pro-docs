@@ -1,11 +1,15 @@
 import { defineConfig } from 'vitepress'
 
+const root = '/pro/docs'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: 'CatchAdmin pro 文档站',
+  title: 'CatchAdmin pro 文档',
   description: 'CatchAdmin pro 文档',
   assetsDir: 'docs/assets',
   cleanUrls: true,
+  rewrites: {
+    '(.*)': 'pro/docs/(.*)'
+  },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [{ text: '文档', link: '/start/overview' }],
@@ -13,7 +17,7 @@ export default defineConfig({
     sidebar: [
       {
         text: '开始',
-        base: '/start',
+        base: `${root}/start`,
         items: [
           { text: '介绍', link: '/overview' },
           { text: '安装', link: '/install' },
@@ -22,7 +26,7 @@ export default defineConfig({
       },
       {
         text: '服务端',
-        base: '/server',
+        base: `${root}/server`,
         items: [
           { text: '配置', link: '/config.md' },
           { text: '约定', link: '/promise.md' },
@@ -38,7 +42,7 @@ export default defineConfig({
       },
       {
         text: '前端',
-        base: '/front',
+        base: `${root}/front`,
         items: [
           { text: '简介', link: '/introduce.md' },
           { text: '入口', link: '/entry.md' },
@@ -52,7 +56,7 @@ export default defineConfig({
       },
       {
         text: '综合',
-        items: [{ text: '常见问题', link: '/faq.md' }]
+        items: [{ text: '常见问题', link: `${root}/faq.md` }]
       }
     ],
 
