@@ -5,7 +5,7 @@ const root = '/pro/docs'
 export default defineConfig({
   title: 'CatchAdmin pro 文档',
   description: 'CatchAdmin pro 文档',
-  assetsDir: 'docs/assets',
+  assetsDir: 'pro/docs/assets',
   cleanUrls: true,
   rewrites: {
     '(.*)': 'pro/docs/(.*)'
