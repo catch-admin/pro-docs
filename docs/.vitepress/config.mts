@@ -11,9 +11,6 @@ export default defineConfig({
     '(.*)': 'pro/docs/(.*)'
   },
   themeConfig: {
-    // https://vitepress.dev/reference/default-theme-config
-    nav: [{ text: '文档', link: '/start/overview' }],
-
     sidebar: [
       {
         text: '开始',
