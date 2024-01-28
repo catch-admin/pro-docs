@@ -11,6 +11,13 @@ export default defineConfig({
     '(.*)': 'pro/docs/(.*)'
   },
   themeConfig: {
+    nav: [
+      {
+        text: '官网',
+        link: 'https://catchadmin.com/',
+        target: '_self'
+      }
+    ],
     sidebar: [
       {
         text: '开始',
