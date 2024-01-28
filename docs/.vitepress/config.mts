@@ -61,7 +61,7 @@ export default defineConfig({
       provider: 'algolia',
       options: {
         appId: 'Z82AVC6OQ9',
-        apiKey: '3418e43d03b752b8354c9fa5295e4547',
+        apiKey: '5883216465758859a57ee9d7332d79c3',
         indexName: 'catchadmin',
         locales: {
           zh: {
