@@ -10,6 +10,17 @@ export default defineConfig({
   rewrites: {
     '(.*)': 'pro/docs/(.*)'
   },
+  head: [
+    ['script', { async: '', src: 'https://www.googletagmanager.com/gtag/js?id=G-ETX73YSQ1V' }],
+    [
+      'script',
+      {},
+      `window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-ETX73YSQ1V');`
+    ]
+  ],
   themeConfig: {
     nav: [
       {
