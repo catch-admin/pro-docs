@@ -18,7 +18,20 @@ export default defineConfig({
       `window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-ETX73YSQ1V');`
+      gtag('config', 'G-ETX73YSQ1V');
+      `
+    ],
+    [
+      'script',
+      {},
+      ` setTimeout(() => {
+        const title = document.querySelector('.VPNavBarTitle .title')
+      
+        title.href = 'javascript:void(0)'
+        title.onclick = () => {
+          window.location.href = 'https://catchadmin.com/pro'
+        }
+      }, 500);`
     ]
   ],
   themeConfig: {
