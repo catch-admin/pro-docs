@@ -77,7 +77,10 @@ export default defineConfig({
       },
       {
         text: '综合',
-        items: [{ text: '常见问题', link: `${root}/faq.md` }]
+        items: [
+          { text: '常见问题', link: `${root}/faq.md` },
+          { text: '项目优化', link: `${root}/optimize.md` }
+        ]
       }
     ],
 
