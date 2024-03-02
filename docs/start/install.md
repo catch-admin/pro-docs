@@ -73,6 +73,10 @@ php artisan catch:install
 php artisan serve
 ```
 
+:::tip
+如果到正式环境需要初始化项目，请使用 php artisan catch:install --prod
+:::
+
 ## 前端项目
 
 进入到 `web` 目录，然后配置一个 `.env` 文件, 内容如下
@@ -112,6 +116,10 @@ VITE_BASE_URL = '正式环境的 API 地址'
 yarn run build
 ```
 
+:::tip
+打包后开发工具，演示组件等页面将会被删除。需要注意 ⚠️
+:::
+
 ::: warning
 前端项目配置最好开启 `Gzip` 可以加速前端项目访问速度。
 :::
@@ -150,7 +158,7 @@ http {
 
 ## 部署配置
 
-```js
+```sh
 server
 {
     listen  443  ssl http2;
@@ -172,13 +180,18 @@ server
       }
     }
 
-location / {
-root admin_root_path; // 自定义 admin_root_path, 默认打包在 ./public/admin 目录下
-try_files $uri $uri/ /admin.html;
-}
+    # 静态文件访问
+    location ~ /uploads {
+        root base/storage/;
+        autoindex on;
+    }
 
-# PHP 支持
+    location / {
+        root admin_root_path; // 自定义 admin_root_path, 默认打包在 ./public/admin 目录下
+        try_files $uri $uri/ /admin.html;
+    }
 
+    # PHP 支持
     location ~ \.php$ {
         try_files $uri /index.php =404;
         fastcgi_split_path_info ^(.+\.php)(/.+)$;
@@ -187,7 +200,6 @@ try_files $uri $uri/ /admin.html;
         fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
         include fastcgi_params;
     }
-
 }
 
 ```
