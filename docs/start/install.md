@@ -21,7 +21,7 @@
 
 ## 下载源码
 
-请首先在[授权网站](https://license.catchadmin.com)进行注册，注册完成之后登录授权站点，在[授权页面](https://license.catchadmin.com/license)购买授权。在购买完成之后
+请首先在[授权网站](https://catchadmin.com/signup)进行注册，注册完成之后登录授权站点，在[授权页面](https://catchadmin.com/pro/user/license)购买授权。在购买完成之后
 根据页面要求，在购买授权之后，将会拉你进入专业版仓库，然后在进行下面的操作
 
 :::warning
