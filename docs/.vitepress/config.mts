@@ -92,12 +92,7 @@ export default defineConfig({
     ],
 
     search: {
-      provider: 'algolia',
-      options: {
-        appId: '1JRPGQ44JC',
-        apiKey: '150489741e0052b72a9dbfc4aca92518',
-        indexName: 'catchadmindocs'
-      }
+      provider: 'local'
     },
 
     returnToTopLabel: '回到顶部',
