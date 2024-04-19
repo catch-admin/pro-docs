@@ -5,7 +5,7 @@
 这个版本主要是进行了 `Laravel11` 项目的迁移，在获取代码之后首先执行
 
 ```
-php artisan catch:migreate permissions
+php artisan catch:migrate permissions
 ```
 
 :::warning
