@@ -43,12 +43,49 @@ sudo apt-get install composer
 
 如果您使用的是 Windows 系统，可以从 [composer](https://docs.phpcomposer.com/) 的官方网站下载 exe 安装文件进行安装。一旦您已经安装了 `composer`，接下来您可以进入 `CatchAdmin` 项目所在的目录，并运行以下命令进行安装：
 
+### 密码认证
+
 ```shell
 composer install
 // 使用 composer install 会进行身份认证, 弹出让输入用户密码, 直接输入授权网站账户密码即可
 ```
 
 这个命令会自动下载并安装`CatchAdmin`项目所需要的 PHP 包。
+
+### 自动认证
+
+如果使用 composer 命令安装不成功的话。可以使用这种办法。在根目录创建 `auth.json` 文件，然后编辑 `auth.json`，输入以下内容
+
+```json
+{
+  "http-basic": {
+    "satis.catchadmin.com": {
+      "username": "邮箱", // https://catchadmin.com/pro 授权账户邮箱
+      "password": "密码" // https://catchadmin.com/pro 授权账户密码
+    }
+  }
+}
+```
+
+或者直接使用下面的命令创建
+
+```sh
+echo '{
+        "http-basic": {
+            "satis.catchadmin.com": {
+                "username": "邮箱",
+                "password": "密码"
+            }
+        }
+}' > auth.json
+```
+
+创建成功之后，就不需要每次输入密码了。直接使用 `composer install` 方法即可
+
+:::warning
+系统会对每个账户下载来源统计，会对出现异常账户会进行一些限制，如果有误，请联系管理员
+:::
+
 除了 PHP 包之外，该项目还需要一些前端包。您可以使用以下命令安装这些包：
 
 前端项目在根目录的 `web` 目录下
