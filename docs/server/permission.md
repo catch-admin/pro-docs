@@ -15,7 +15,7 @@
 php artisan catch:module:install permissions
 ```
 
-:::info
+:::tip
 开启之后如果没有权限菜单，可以刷新一下
 :::
 

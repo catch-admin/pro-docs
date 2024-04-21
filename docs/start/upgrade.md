@@ -181,7 +181,7 @@ php artisan catch:db:seed permissions
 - 新增手机短信登陆功能
 - 新增支持手机号登陆功能
 
-## V0.0.2 版本发布
+## V002 版本发布
 
 - 新增 Excel 导入导出组件
 - 新增 Wechat 模块
