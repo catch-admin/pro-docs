@@ -167,6 +167,10 @@ public function batchUpdate(string $field, array $condition, array $data): bool
 - condition 更新条件的值 例如 [1, 2, 3]
 - data 更新的数据，已键值对方法 例如 ['name' =>['小明', '小隋', '小书'], 'age' => [12, 12, 13]]
 
+:::tip
+该方法不支持模型事件
+:::
+
 #### 示例
 
 ```php
