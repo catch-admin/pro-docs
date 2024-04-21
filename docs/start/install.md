@@ -43,6 +43,16 @@ sudo apt-get install composer
 
 如果您使用的是 Windows 系统，可以从 [composer](https://docs.phpcomposer.com/) 的官方网站下载 exe 安装文件进行安装。一旦您已经安装了 `composer`，接下来您可以进入 `CatchAdmin` 项目所在的目录，并运行以下命令进行安装：
 
+### 命令行认证
+
+专业版提供一个非常方便的脚本，进行认证请求。到项目根目录，使用下面的代码
+
+```sh
+php auth.php 邮箱 密码
+```
+
+认证成功之后，会自动安装依赖
+
 ### 密码认证
 
 ```shell
