@@ -157,6 +157,27 @@ public function createBy(array $data): mixed
 public function updateBy($id, array $data): mixed
 ```
 
+### 批量更新
+
+```php
+public function batchUpdate(string $field, array $condition, array $data): bool
+```
+
+- field 更新条件的字段 （例如 ID）
+- condition 更新条件的值 例如 [1, 2, 3]
+- data 更新的数据，已键值对方法 例如 ['name' =>['小明', '小隋', '小书'], 'age' => [12, 12, 13]]
+
+#### 示例
+
+```php
+$model = new SomeModel();
+$model->batchUpdate('id', [1,2,3],  ['name' =>['小明', '小隋', '小书'], 'age' => [12, 12, 13]])
+```
+
+:::tip
+更新条件的值的数量要跟 Data 更新的值的数量一致，不然会被忽略
+:::
+
 ###
 
 ### 查询数据
