@@ -53,15 +53,6 @@ php auth.php 邮箱 密码
 
 认证成功之后，会自动安装依赖
 
-### 密码认证
-
-```shell
-composer install
-// 使用 composer install 会进行身份认证, 弹出让输入用户密码, 直接输入授权网站账户密码即可
-```
-
-这个命令会自动下载并安装`CatchAdmin`项目所需要的 PHP 包。
-
 ### 自动认证
 
 如果使用 composer 命令安装不成功的话。可以使用这种办法。在根目录创建 `auth.json` 文件，然后编辑 `auth.json`，输入以下内容
