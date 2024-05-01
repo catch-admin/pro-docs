@@ -15,9 +15,13 @@
 | #   | 必须                  | 官网                              |
 | :-- | :-------------------- | :-------------------------------- |
 | 1   | composer PHP 包管理器 | https://getcomposer.org/download/ |
-| 2   | nodejs                | https://nodejs.org/zh-cn/         |
+| 2   | nodejs(>= 18.8)       | https://nodejs.org/zh-cn/         |
 | 3   | yarn 前端包管理器     | https://yarn.bootcss.com/         |
 | 4   | vite                  | https://cn.vitejs.dev/            |
+
+:::warning
+一定要安装好上面的工具之后，在进行下面的操作，不然会失败
+:::
 
 ## 下载源码
 
@@ -36,6 +40,8 @@
 ```shell
 // mac os
 brew install composer
+// 安装前端 yarn
+brew install yarn
 
 // linux
 sudo apt-get install composer
@@ -87,24 +93,6 @@ echo '{
 系统会对每个账户下载来源统计，会对出现异常账户会进行一些限制，如果有误，请联系管理员
 :::
 
-除了 PHP 包之外，该项目还需要一些前端包。您可以使用以下命令安装这些包：
-
-前端项目在根目录的 `web` 目录下
-
-```shell
-cd web
-
-// 安装完 nodejs 之后, 再安装 yarn
-npm install --global yarn
-
-// 安装完成之后, 使用
-yarn install
-```
-
-:::tip
-如果遇到网络问题，或者安装过慢的情况，需要加上前端镜像，使用这个命令即可 `yarn config set registry https://registry.npmmirror.com`
-:::
-
 这样就可以安装所有需要的依赖包了。依赖安装完成之后，还需要安装项目的基本信息，如下
 
 ```shell
@@ -121,10 +109,29 @@ php artisan serve
 
 ## 前端项目
 
-进入到 `web` 目录，然后配置一个 `.env` 文件, 内容如下
+前端项目在根目录的 `web` 目录下
+:::tip
+以下步骤已经在 catch:install 中自动完成，如果你需要手动安装，请按照下面的步骤
+:::
 
 ```shell
-// 接口地址, 根据项目自己配置
+cd web
+
+// 安装完成之后, 使用
+yarn install
+```
+
+:::tip
+如果遇到网络问题，或者安装过慢的情况，需要加上前端镜像，使用这个命令即可 `yarn config set registry https://registry.npmmirror.com`
+:::
+
+进入到 `web` 目录，然后配置一个 `.env` 文件, 内容如下
+
+:::tip
+catch:install 已经自动帮你设置了好了，如果需要，你可以按照下面的内容自行修改
+:::
+
+```shell
 VITE_BASE_URL=http://127.0.0.1:8000/api/
 // 项目的主标题
 VITE_APP_NAME=xxx管理后台
