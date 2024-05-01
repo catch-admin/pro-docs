@@ -4,34 +4,34 @@
 
 ## 模块如何工作
 
-模块通常是存放在**modules**目录下的，通过下面的命令来进行模块安装
+CatchAdmin 的模块通常是存放在**modules**目录下的，通过下面的命令来进行模块安装
 
 ```shell
 php artisan catch:module:install <module>
 ```
 
-运行完成之后，会在 `storage/app` 下，生成 `module.json`，在该文件里可以看到模块相关的信息。如果是从 2.x 版本过渡到 3.x 的，那么应该很了解这个概念。和之前并无太大差别，当然`Laravel`社区早就有了这种概念。
-![模块架构图](https://z3.ax1x.com/2021/04/26/gSrLz6.png)
+运行完成之后，会在 `storage/app` 下，生成 `module.json`，在该文件里可以看到模块相关的信息。
+![Laravel Admin - catchadmin模块架构图](https://z3.ax1x.com/2021/04/26/gSrLz6.png)
 
 要了解模块具体如何工作的，用一个新模块开发来说明下
 
 ## 开发新模块
 
 开发模块可以通过创建模块开始
-![pSlN1y9.md.png](https://s1.ax1x.com/2023/01/16/pSlN1y9.md.png)
+![Laravel Admin - catchadmin 创建模块](https://s1.ax1x.com/2023/01/16/pSlN1y9.md.png)
 
 点击开发工具的模块管理，然后新建模块，按照提示填入模块的相关信息之后，点击创建即可。就会自动生成相关模块的文件，如下生成一个 **test** 模块
 
-![pSlN2Y8.md.png](https://s1.ax1x.com/2023/01/16/pSlN2Y8.md.png)
-![pSlNv6J.png](https://s1.ax1x.com/2023/01/16/pSlNv6J.png)
+![Laravel Admin - catchadmin 管理模块](https://s1.ax1x.com/2023/01/16/pSlN2Y8.md.png)
+![Laravel Admin - catchadmin 管理模块](https://s1.ax1x.com/2023/01/16/pSlNv6J.png)
 
 如图可以看到已经生成了**Test**模块
 
-- Http 目录就是开发模块
-- Models 模型存在
-- database 存在 **migration** 和 **seed** 的目录
-- Providers 这个非常重要，和 Laravel Package 差不多，路由，commands，config 都是需要从这里载入
-- route.php 路由文件
+- `Http` 目录就是开发模块
+- `Models` 模型存在
+- `database` 存在 **migration** 和 **seed** 的目录
+- `Providers` 这个非常重要，和 Laravel Package 差不多，路由，commands，config 都是需要从这里载入
+- `route.php` 路由文件
 
 这里着重看下 `Provider`
 
