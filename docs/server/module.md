@@ -77,6 +77,29 @@ class TestServiceProvider extends CatchModuleServiceProvider
 这里设置的 middlewares 是作用于所有模块的，所以谨慎设置
 :::
 
+## 自动加载
+
+实际上，CatchAdmin 得模块启动必须依赖一个非常重要的文件，那就是 `storage/app/module.json`。模块的禁用启用，都是依赖该 json 文件。
+如果实际不需要这个依赖，`CatchAdmin` 提供了一个可配置参数，
+
+::: code-group
+
+```js [.env]
+// 在 .env 文件中修改
+module_autoload = true
+```
+
+```php [config/catch.php]
+// 在模块配置中修改
+[
+    'module' => [
+        'autoload' => env('module_autoload', false),
+    ],
+]
+```
+
+:::
+
 ## 安装
 
 :::info
