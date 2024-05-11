@@ -49,7 +49,8 @@ export default defineConfig({
         items: [
           { text: '介绍', link: '/overview' },
           { text: '安装', link: '/install' },
-          { text: '更新', link: '/upgrade' }
+          { text: '更新', link: '/upgrade' },
+          { text: '部署', link: '/deploy' }
         ]
       },
       {
