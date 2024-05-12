@@ -72,6 +72,63 @@ Route::post('user/import', [UserController::class, 'import']);
 
 如果你不是使用 `catchtable` 的话，也可以自行调用 `import` 组件
 
-```vue
+```jsx
 <Import :action="/user/import" />
 ```
+
+## 异步
+
+同样的，导入也支持异步导入，只需要稍微改造一下，首先到 `UserImport` 文件
+
+```php
+namespace Modules\User\Import;
+
+use Catch\Contracts\AsyncTaskInterface;
+use Catch\Support\Excel\Import;
+use Illuminate\Support\Collection;
+use Modules\System\Support\Traits\AsyncTaskDispatch;
+use Modules\User\Models\User as UserModel;
+
+// 还需要继承 AsyncTaskInterface
+class User extends Import implements AsyncTaskInterface
+{
+    // 添加 trait
+    use AsyncTaskDispatch;
+
+    public function collection(Collection $users)
+    {
+        // TODO: Implement collection() method.
+        $users->each(function ($user) {
+            $userModel = new UserModel();
+            $userModel->username = $user[1];
+            $userModel->email = $user[2];
+            $userModel->password = $user[3];
+            $userModel->save();
+        });
+    }
+}
+```
+
+来到控制器 `import` 方法
+
+```php
+public function import(Request $request, \Modules\User\Import\User $import)
+{
+    // 添加 async 异步方法即可
+    return $import->async()->import($request->file('file'));
+}
+```
+
+这样任务就变成了异步任务。既然是异步任务，那么肯定需要执行。找到 `app/Console/Kernel.php`, 添加下面的任务即可
+:::tip
+这里和导出异步任务一样
+:::
+
+```php
+protected function schedule(Schedule $schedule): void
+{
+    $schedule->command('async:task')->everyMinute();
+}
+```
+
+任务的情况和具体信息，都可以在后台管理中的`系统管理/异步任务`列表中进行查看
