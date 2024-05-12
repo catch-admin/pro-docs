@@ -65,7 +65,8 @@ export default defineConfig({
           { text: '数据权限', link: '/datarange.md' },
           { text: '代码生成', link: '/code-generate.md' },
           { text: '命令介绍', link: '/consoles.md' },
-          { text: '导入导出', link: '/export.md' },
+          { text: '数据导出', link: '/export.md' },
+          { text: '数据导入', link: '/import.md' },
           { text: '小技巧', link: '/tips.md' }
         ]
       },
