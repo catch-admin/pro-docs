@@ -1,4 +1,4 @@
-# 配置
+# 框架配置
 
 ## catchadmin 配置
 
@@ -119,6 +119,9 @@ return [
             \Catch\Middleware\JsonResponseMiddleware::class
         ]
     ],
+
+    // 配置前端项目 views 路径
+    'views_path' => '前端项目根目录/srv/views/'
 ];
 ```
 
@@ -143,8 +146,9 @@ return [
 - `route` 路由配置
   - `prefix` 路由前缀
   - `middlewares` 路由默认路由
+- `views_path` 配置前端项目 views 路径
 
-项目有定制需求，一定要看看这些配置
+  项目有定制需求，一定要看看这些配置
 
 ## 模块配置
 

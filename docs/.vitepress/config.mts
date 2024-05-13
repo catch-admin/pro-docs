@@ -67,6 +67,7 @@ export default defineConfig({
           { text: '命令介绍', link: '/consoles.md' },
           { text: '数据导出', link: '/export.md' },
           { text: '数据导入', link: '/import.md' },
+          { text: '动态配置', link: '/dymaicConfig.md' },
           { text: '小技巧', link: '/tips.md' }
         ]
       },
