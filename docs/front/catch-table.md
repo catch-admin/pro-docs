@@ -131,6 +131,27 @@ ok，这样一个完整的表格页面就创建完成了。
 - `Create` 组件是自带 `primary` props 的，用于更新
 - `Create` 组件是自带 `api` props 的，api 主要用于接口提交
 
+## 回收站
+
+回收站功能只需要一个配置就是轻松开启
+
+```javascript
+<catch-table :trash="true"/>
+```
+
+### 数据恢复
+
+恢复功能需要添加一条路由才可以正常运行，例如用户管理(`UserController`)添加一条 `restore` 路由
+
+```php
+// 回收站恢复
+Route::put('users/restore/{id}', [UserController::class, 'restore']);
+```
+
+:::warning
+回收站数据的删除是强制删除，删除后数据将不可恢复
+:::
+
 ## 隐藏分页
 
 一般列表都是需要分页的，但是某种场景下，需要隐藏分页的话，可以使用下面的代码
