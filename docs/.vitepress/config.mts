@@ -13,15 +13,17 @@ export default defineConfig({
     '(.*)': 'pro/docs/(.*)'
   },
   head: [
-    ['script', { async: '', src: 'https://www.googletagmanager.com/gtag/js?id=G-ETX73YSQ1V' }],
+    // 百度统计
     [
       'script',
       {},
-      `window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-ETX73YSQ1V');
-      `
+      `var _hmt = _hmt || [];
+      (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?5fcb7ae92be895d2e1e9d4136e2ed21b";
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(hm, s);
+      })();`
     ],
     [
       'script',
