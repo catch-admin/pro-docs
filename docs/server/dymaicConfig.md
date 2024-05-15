@@ -65,7 +65,7 @@ public function store(Request $request)
 ```
 
 最终入库的形式将会是这样的
-![CatchAdmin  动态配置 - Laravel Admin](/docs/assets/images/dymaicConfig.png)
+![CatchAdmin  动态配置 - Laravel Admin](https://image.catchadmin.com/image.png)
 
 ### 动态加载
 
