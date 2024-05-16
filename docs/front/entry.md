@@ -1,11 +1,11 @@
 # 入口
 
-前端项目放置在根目录 `web` 目录下，关于前端各个目录的作用就不做多介绍了，可以到[项目介绍](/start/overview)中查看。`app.ts` 即项目的入口
+前端项目放置在根目录 `web` 目录下，关于前端各个目录的作用就不做多介绍了，可以到[项目介绍](/start/overview)中查看。`main.ts` 即项目的入口
 
-```javascript title="resource/admin/app.ts"
-import '/admin/styles/index.scss'
+```javascript
+import '@/styles/index.scss'
 
-import CatchAdmin from './support/catchAdmin'
+import CatchAdmin from '@/support/catchAdmin'
 
 // 首先引入的是 catchadmin 对象
 const admin = new CatchAdmin()
@@ -19,14 +19,14 @@ admin.bootstrap()
 ```javascript title="resource/admin/support/catchAdmin.ts"
 import { createApp } from 'vue'
 import type { App as app } from 'vue'
-import App from '/admin/App.vue'
-import router, { bootstrapRouter } from '/admin/router'
+import App from '@/App.vue'
+import router, { bootstrapRouter } from '@/router'
 import ElementPlus from 'element-plus'
 import zh from 'element-plus/es/locale/lang/zh-cn'
-import { bootstrapStore } from '/admin/stores'
+import { bootstrapStore } from '@/stores'
 import Cache from './cache'
-import { bootstrapI18n } from '/admin/i18n'
-import guard from '/admin/router/guard'
+import { bootstrapI18n } from '@/i18n'
+import guard from '@/router/guard'
 
 /**
  * catchadmin
