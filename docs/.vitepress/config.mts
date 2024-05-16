@@ -71,6 +71,7 @@ export default defineConfig({
           { text: '数据导入', link: '/import.md' },
           { text: '动态配置', link: '/dymaicConfig.md' },
           { text: 'webhook通知', link: '/webhook.md' },
+          { text: '异步任务', link: '/async.md' },
           { text: '小技巧', link: '/tips.md' }
         ]
       },
