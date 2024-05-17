@@ -25,12 +25,12 @@
 ├─index.vue
 ```
 
-![pS3JQy9.png](https://s1.ax1x.com/2023/01/18/pS3JQy9.png)
+![catchadmin 专业版 Laravel Admin](https://s1.ax1x.com/2023/01/18/pS3JQy9.png)
 采用的是传统的双栏布局，即左侧是 **Sider** 右侧是内容。可以从 `layout/index.vue` 看出布局
 
-```html title="resource/admin/layout/index.vue"
+```html title="web/src/layout/index.vue"
 <template>
-  <div class="w-full flex" ref="el">
+  <div class="flex w-full" ref="el">
     <!--- Sider  -->
     <Sider />
     <!--content-->
@@ -41,12 +41,12 @@
 
 内容区域分为`Header` 和 `router-view`，可以在 `layout/components/content.vue` 中
 
-```html title="resource/admin/layout/components/content.vue"
+```html title="web/src/layout/components/content.vue"
 <template>
   <div :class="'w-full h-screen flex flex-col transition-spacing duration-300 ease-linear overflow-hidden ' + mlClass">
     <Header />
 
-    <div class="p-1 sm:p-2 max-w-full h-screen overflow-auto sm:overflow-x-hidden">
+    <div class="h-screen max-w-full p-1 overflow-auto sm:p-2 sm:overflow-x-hidden">
       <router-view />
     </div>
   </div>
@@ -56,7 +56,7 @@
 
 所以当在 `vue router` 使用 `Layout` 组件是，组件的内容便会展示在 `layout` 内容组件的 `router-view` 中。譬如说
 
-```javascript title="resource/layout/index.ts"
+```javascript title="web/src/layout/index.ts"
 import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
 import type { App } from 'vue'
 export const constantRoutes: RouteRecordRaw[] = [

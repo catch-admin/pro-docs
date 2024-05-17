@@ -5,7 +5,7 @@
 ## 基础用法
 
 一个简单的表格，只需要在组件上添加, 这里就以用户管理页面作为例子, 一步一步实现
-![](https://www.hualigs.cn/image/646311f57c899.jpg)
+![CatchAdmin 表格基础用法-laravel admin](https://www.hualigs.cn/image/646311f57c899.jpg)
 代码如下
 
 ```javascript
@@ -34,7 +34,7 @@
 
 ## 表格搜索
 
-![](https://www.hualigs.cn/image/6463130b546c9.jpg)
+![CatchAdmin 表格搜索-Laravel admin](https://www.hualigs.cn/image/6463130b546c9.jpg)
 只需要新增 `search-form` 属性即可
 
 ```javascript
@@ -78,7 +78,7 @@ ok，这样一个完整的表格页面就创建完成了。
 ## 新增数据
 
 从上图可以看出，一般情况下表格都是带有增删改查的，那么如何新增数据呢？高级版本中，只需要在 `catchtable` 使用 `slot` 即可
-![](https://www.hualigs.cn/image/64631573c61bc.jpg)
+![CatchAdmin 表格新增数据-laravel admin](https://www.hualigs.cn/image/64631573c61bc.jpg)
 
 ```javascript
 <template>
@@ -300,7 +300,7 @@ Route::put('users/restore/{id}', [UserController::class, 'restore']);
   </catch-table>
 ```
 
-![](https://s2.xptou.com/2023/05/24/646d9eff36fed.png)
+![CatchAdmin 表格操作插槽-laravel admin](https://s2.xptou.com/2023/05/24/646d9eff36fed.png)
 
 ### 批量操作插槽
 
@@ -315,7 +315,7 @@ Route::put('users/restore/{id}', [UserController::class, 'restore']);
 ```
 
 光是这样的是不够的，还要获取批量选择 ID，请查看[获取表格多选 ID](#获取表格多选id)，获取到多选 ID 之后进行操作
-![](https://s2.xptou.com/2023/05/24/646da1251a841.png)
+![CatchAdmin 批量操作插槽-laravel admin](https://s2.xptou.com/2023/05/24/646da1251a841.png)
 
 ### 栏目操作插槽
 
@@ -330,7 +330,7 @@ Route::put('users/restore/{id}', [UserController::class, 'restore']);
 </catch-table>
 ```
 
-![](https://s2.xptou.com/2023/05/24/646da22bba7ff.png)
+![CatchAdmin 栏目操作插槽-laravel admin](https://s2.xptou.com/2023/05/24/646da22bba7ff.png)
 
 ### 弹窗插槽
 
@@ -469,7 +469,7 @@ export interface Column {
 }
 ```
 
-![](https://s2.xptou.com/2023/05/24/646da4af1bc11.png)
+![CatchAdmin 多级表头-laravel admin](https://s2.xptou.com/2023/05/24/646da4af1bc11.png)
 
 ### 字段太长，省略号
 
@@ -481,7 +481,7 @@ export interface Column {
 },
 ```
 
-![](https://s2.xptou.com/2023/05/24/646d451b3e49d.png)
+![CatchAdmin 字段太长，省略号-laravel admin](https://s2.xptou.com/2023/05/24/646d451b3e49d.png)
 
 ### 字段状态切换
 
@@ -504,7 +504,7 @@ public function enable($id, Request $request)
 }
 ```
 
-![](https://s2.xptou.com/2023/05/24/646d4672500a6.png)
+![CatchAdmin 字段状态切换-laravel admin](https://s2.xptou.com/2023/05/24/646d4672500a6.png)
 
 ### 图片预览
 
@@ -582,4 +582,4 @@ public function enable($id, Request $request)
 }
 ```
 
-![](https://s2.xptou.com/2023/05/24/646d476c4962a.png)
+![CatchAdmin 表格排序-laravel admin](https://s2.xptou.com/2023/05/24/646d476c4962a.png)

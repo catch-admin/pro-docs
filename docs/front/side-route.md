@@ -10,11 +10,11 @@
 
 ## 类型
 
-对于权限和菜单,系统定义了两种类型，查看 `resource/admin/types`
+对于权限和菜单,系统定义了两种类型，查看 `web/src/types`
 
 ### 权限类型
 
-```js title="resource/admin/types/Permissions.ts"
+```js title="web/src/types/Permissions.ts"
 export interface Permission {
   id: number // id
   parent_id: number // 父级 ID
@@ -67,7 +67,7 @@ export interface Menu extends Omit<RouteRecordRaw, 'meta'> {
 
 在了解完这两个相关类型之后，再来看动态菜单和权限如何实现的，静态菜单就不做介绍了。首先找到`web/src/route/guard/index.ts` 文件，从这里开始，这里是路由导航守卫。下面直接通过代码来注解如何实现
 
-```js title="resource/admin/route/guard/index.ts"
+```js title="web/src/route/guard/index.ts"
 const guard = (router: Router) => {
   // white list
   const whiteList: string[] = [WhiteListPage.LOGIN_PATH, WhiteListPage.NOT_FOUND_PATH]
@@ -142,7 +142,7 @@ const asyncRoutes = permissionStore.getAsyncMenusFrom(toRaw(userStore.getPermiss
 
 这里就不细说里面的实现了，是通过递归实现无限极菜单。但是这里一个非常重要的点，就是权限是通过`pinia` 进行保存的，因为 `pinia` 是响应式的。找到 `web/src/store/user/permissions.ts`，看下 `permissionStore` 的定义
 
-```js title="resource/admin/store/user/permissions.ts"
+```js title="web/src/store/user/permissions.ts"
 interface Permissions {
   menus: Menu[] // 菜单
 

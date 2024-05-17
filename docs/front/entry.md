@@ -16,7 +16,7 @@ admin.bootstrap()
 
 进入到 `CatchAdmin` 对象中，可以看到项目引入了哪些全局组件
 
-```javascript title="resource/admin/support/catchAdmin.ts"
+```javascript title="web/src/support/catchAdmin.ts"
 import { createApp } from 'vue'
 import type { App as app } from 'vue'
 import App from '@/App.vue'

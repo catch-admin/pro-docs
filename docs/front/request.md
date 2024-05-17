@@ -4,7 +4,7 @@
 
 ## 请求
 
-```typescript title="resource/admin/support/http.ts"
+```typescript title="web/src/support/http.ts"
 import Http from '/admin/support/http'
 
 // GET 请求
