@@ -44,6 +44,12 @@ export default defineConfig({
     ]
   ],
   themeConfig: {
+    nav: [
+      {
+        text: '动态表单✨',
+        link: 'https://catchadmin.com/docs/forms/intro'
+      }
+    ],
     sidebar: [
       {
         text: '开始',
