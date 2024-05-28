@@ -1,5 +1,28 @@
 # 更新日志
 
+## v019 版本发布
+
+- 修复模型删除时未删除对应的关联关系
+- 移除默认的认证，需要用户调整一下，算是破坏更新
+
+```php
+// 找到 config/catch.php, 将 auth 改为 admin 即可
+'auth' => 'admin',
+```
+
+- 添加自动[打包命令](./deploy.md)，该命令可以将项目打包成 zip 包
+
+```shell
+php think  catch:build
+```
+
+- 添加[回收站功能](../front/catch-table.md#回收站)
+- 修复 `SQL` 日志记录`%`报错
+- 修复时区导致日期错误
+- 增强路由，添加 `adminResource` 路由方法
+- 修复低版本 Mysql 安装报错
+- 添加批量更新方法
+
 ## v018 版本发布
 
 - 新增[导入组件](../server/import.md)
