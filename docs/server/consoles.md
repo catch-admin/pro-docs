@@ -73,16 +73,15 @@ php artisan catch:migrate permissions
 ## 导出模块相关的菜单
 
 ```shell
-php artisan catch:export:menu <module> <table?>
+php artisan catch:export:menu
 ```
 
-- table 可选参数，默认是 `permissions` 表
+- `--p` 可选参数，是否导出树形结构
 
 导出权限模块的菜单，并且生成`seed`文件。这个命令只在打包模块时会有用处，如果模块不用与与其他人共享的话，基本用不着
-
-```php
-php artisan catch:export:menu permissions
-```
+:::tip
+根据提示选择导出的模块即可
+:::
 
 ## 生成模型
 
