@@ -187,12 +187,24 @@ Route::put('users/restore/{id}', [UserController::class, 'restore']);
 <catch-table :operation="false"/>
 ```
 
+## 隐藏表头
+
+```javascript
+<catch-table :showHeader="false"/>
+```
+
 ## 隐藏工具栏
 
 在表格右上角，有三个默认工具栏操作，分别是 `刷新`，`表格栏目`, `搜索`, 如果不需要的话，可以使用
 
 ```javascript
 <catch-table :show-tools="false"/>
+```
+
+## 隐藏多选删除
+
+```javascript
+<catch-table :multiDelShow="false"/>
 ```
 
 ## 默认参数
@@ -203,6 +215,19 @@ Route::put('users/restore/{id}', [UserController::class, 'restore']);
 ```javascript
 <catch-table :defualt-params="{ dic_id: 1}"/>
 ```
+
+## 默认选中
+
+有时候表格需要默认选中一些数据，我们可以使用
+
+```javascript
+<catch-table :defaualtMultiSelection="[1,2,4]"/>
+
+```
+
+:::tip
+目前使用表格数据的主键数据作为选中依据
+:::
 
 ## 曝露方法
 
