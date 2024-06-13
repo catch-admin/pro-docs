@@ -5,7 +5,7 @@
 ## 基础用法
 
 一个简单的表格，只需要在组件上添加, 这里就以用户管理页面作为例子, 一步一步实现
-![CatchAdmin 表格基础用法-laravel admin](https://www.hualigs.cn/image/646311f57c899.jpg)
+![CatchAdmin 表格基础用法-laravel admin](https://image.catchadmin.com/202406130849406.png)
 代码如下
 
 ```javascript
@@ -78,7 +78,7 @@ ok，这样一个完整的表格页面就创建完成了。
 ## 新增数据
 
 从上图可以看出，一般情况下表格都是带有增删改查的，那么如何新增数据呢？高级版本中，只需要在 `catchtable` 使用 `slot` 即可
-![CatchAdmin 表格新增数据-laravel admin](https://www.hualigs.cn/image/64631573c61bc.jpg)
+![CatchAdmin 表格新增数据-laravel admin](https://image.catchadmin.com/202406130849989.png)
 
 ```javascript
 <template>
@@ -325,7 +325,7 @@ Route::put('users/restore/{id}', [UserController::class, 'restore']);
   </catch-table>
 ```
 
-![CatchAdmin 表格操作插槽-laravel admin](https://s2.xptou.com/2023/05/24/646d9eff36fed.png)
+![CatchAdmin 表格操作插槽-laravel admin](https://image.catchadmin.com/202406130851032.png)
 
 ### 批量操作插槽
 
@@ -340,7 +340,7 @@ Route::put('users/restore/{id}', [UserController::class, 'restore']);
 ```
 
 光是这样的是不够的，还要获取批量选择 ID，请查看[获取表格多选 ID](#获取表格多选id)，获取到多选 ID 之后进行操作
-![CatchAdmin 批量操作插槽-laravel admin](https://s2.xptou.com/2023/05/24/646da1251a841.png)
+![CatchAdmin 批量操作插槽-laravel admin](https://image.catchadmin.com/202406130852219.png)
 
 ### 栏目操作插槽
 
@@ -355,7 +355,7 @@ Route::put('users/restore/{id}', [UserController::class, 'restore']);
 </catch-table>
 ```
 
-![CatchAdmin 栏目操作插槽-laravel admin](https://s2.xptou.com/2023/05/24/646da22bba7ff.png)
+![CatchAdmin 栏目操作插槽-laravel admin](https://image.catchadmin.com/202406130852588.png)
 
 ### 弹窗插槽
 
@@ -494,7 +494,7 @@ export interface Column {
 }
 ```
 
-![CatchAdmin 多级表头-laravel admin](https://s2.xptou.com/2023/05/24/646da4af1bc11.png)
+![CatchAdmin 多级表头-laravel admin](https://image.catchadmin.com/202406130854407.png)
 
 ### 字段太长，省略号
 
@@ -505,8 +505,6 @@ export interface Column {
     ellipsis: true // 添加该字段
 },
 ```
-
-![CatchAdmin 字段太长，省略号-laravel admin](https://s2.xptou.com/2023/05/24/646d451b3e49d.png)
 
 ### 字段状态切换
 
@@ -529,7 +527,7 @@ public function enable($id, Request $request)
 }
 ```
 
-![CatchAdmin 字段状态切换-laravel admin](https://s2.xptou.com/2023/05/24/646d4672500a6.png)
+![CatchAdmin 字段状态切换-laravel admin](https://image.catchadmin.com/202406130855026.png)
 
 ### 图片预览
 
@@ -607,4 +605,4 @@ public function enable($id, Request $request)
 }
 ```
 
-![CatchAdmin 表格排序-laravel admin](https://s2.xptou.com/2023/05/24/646d476c4962a.png)
+![CatchAdmin 表格排序-laravel admin](https://image.catchadmin.com/202406130856803.png)
