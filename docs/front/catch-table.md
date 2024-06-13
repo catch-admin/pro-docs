@@ -34,7 +34,7 @@
 
 ## 表格搜索
 
-![CatchAdmin 表格搜索-Laravel admin](https://www.hualigs.cn/image/6463130b546c9.jpg)
+![CatchAdmin 表格新增数据-laravel admin](https://image.catchadmin.com/202406130849989.png)
 只需要新增 `search-form` 属性即可
 
 ```javascript
@@ -78,7 +78,6 @@ ok，这样一个完整的表格页面就创建完成了。
 ## 新增数据
 
 从上图可以看出，一般情况下表格都是带有增删改查的，那么如何新增数据呢？高级版本中，只需要在 `catchtable` 使用 `slot` 即可
-![CatchAdmin 表格新增数据-laravel admin](https://image.catchadmin.com/202406130849989.png)
 
 ```javascript
 <template>
